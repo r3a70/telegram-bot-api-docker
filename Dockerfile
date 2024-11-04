@@ -1,6 +1,6 @@
 FROM ubuntu:24.10
 
-RUN apt get update && apt get upgrade -y
+RUN apt get update && apt get upgrade
 RUN apt get install make git zlib1g-dev libssl-dev gperf cmake g++
 RUN git clone --recursive https://github.com/tdlib/telegram-bot-api.git && cd telegram-bot-api && \
     rm -rf build && \
