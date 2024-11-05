@@ -3,7 +3,7 @@ services:
     container_name: telegram-bot-api-docker
     image: ram3a9670/telegram-bot-api-docker:latest
     restart: always
-    volums:
+    volumes:
       - .:/app
     networks:
       - default

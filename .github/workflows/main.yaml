@@ -47,8 +47,6 @@ jobs:
 
     - name: SSH to VPS
       uses: appleboy/ssh-action@master
-      env:
-        PASSPHRASE: "${{ secrets.PASSPHRASE }}"
       with:
         host: ${{ secrets.VPS_HOST }}
         username: ${{ secrets.VPS_USERNAME }}
