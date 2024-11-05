@@ -3,12 +3,12 @@ services:
     container_name: telegram-bot-api-docker
     image: ram3a9670/telegram-bot-api-docker:latest
     restart: always
-    volumes:
-      - .:/app
     command: >
       bash -c "cd /app/telegram-bot-api/bin && ./telegram-bot-api --api-id ${API_ID} --api-hash ${API_HASH} -p ${PORT} --local -v 1"
     networks:
       - default
+    ports:
+      - "127.0.0.1:10005:10005"
     env_file:
       - .env
 
