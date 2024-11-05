@@ -2,6 +2,8 @@ FROM ubuntu:24.10
 
 WORKDIR /app
 
+COPY . /app
+
 RUN apt update && apt upgrade -y
 RUN apt install make git zlib1g-dev libssl-dev gperf cmake g++ -y
 RUN git clone --recursive https://github.com/tdlib/telegram-bot-api.git && cd telegram-bot-api && \
