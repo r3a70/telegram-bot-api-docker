@@ -1,0 +1,14 @@
+services:
+  btapi:
+    container_name: telegram-bot-api-docker
+    image: ram3a9670/telegram-bot-api-docker:latest
+    restart: always
+    volums:
+      - .:/app
+    networks:
+      - default
+
+networks:
+  default:
+    name: surentm
+    external: true
